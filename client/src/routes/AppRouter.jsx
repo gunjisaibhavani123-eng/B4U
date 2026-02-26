@@ -25,6 +25,9 @@ const BudgetSummary = lazy(() => import('@features/budget-planner/components/Bud
 const LearnHome = lazy(() => import('@features/education/components/LearnHome'));
 const TopicList = lazy(() => import('@features/education/components/TopicList'));
 const VideoPlayer = lazy(() => import('@features/education/components/VideoPlayer'));
+const ChallengesHome = lazy(() => import('@features/challenges/components/ChallengesHome'));
+const ChallengeDetail = lazy(() => import('@features/challenges/components/ChallengeDetail'));
+const ChallengeLeaderboard = lazy(() => import('@features/challenges/components/Leaderboard'));
 const ChatHome = lazy(() => import('@features/chat/components/ChatHome'));
 const ProfilePage = lazy(() => import('@features/profile/components/ProfilePage'));
 
@@ -56,6 +59,9 @@ export default function AppRouter() {
             <Route path="/financial-health/:itemType" element={<ChecklistItemDetail />} />
             <Route path="/budget" element={<BudgetOverview />} />
             <Route path="/budget/summary" element={<BudgetSummary />} />
+            <Route path="/challenges" element={<ChallengesHome />} />
+            <Route path="/challenges/:userChallengeId" element={<ChallengeDetail />} />
+            <Route path="/challenges/:challengeId/leaderboard" element={<ChallengeLeaderboard />} />
             <Route path="/learn" element={<LearnHome />} />
             <Route path="/learn/topic/:topicId" element={<TopicList />} />
             <Route path="/chat" element={<ChatHome />} />

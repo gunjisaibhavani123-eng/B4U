@@ -20,6 +20,9 @@ export const ROUTES = {
   LEARN: '/learn',
   LEARN_TOPIC: '/learn/topic/:topicId',
   LEARN_VIDEO: '/learn/video/:videoId',
+  CHALLENGES: '/challenges',
+  CHALLENGE_DETAIL: '/challenges/:userChallengeId',
+  CHALLENGE_LEADERBOARD: '/challenges/:challengeId/leaderboard',
   CHAT: '/chat',
   PROFILE: '/profile',
 };

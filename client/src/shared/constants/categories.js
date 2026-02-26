@@ -38,6 +38,20 @@ export const FIXED_EXPENSE_CATEGORIES = {
   OTHER_FIXED: { label: 'Other fixed expenses', emoji: '\uD83D\uDCCB' },
 };
 
+export const CHALLENGE_TYPES = {
+  SAVINGS: { label: 'Savings', emoji: '\uD83D\uDCB0' },
+  SPENDING_LIMIT: { label: 'Spending Limit', emoji: '\uD83D\uDCB3' },
+  NO_SPEND: { label: 'No Spend', emoji: '\uD83D\uDEAB' },
+  STREAK: { label: 'Streak', emoji: '\uD83D\uDD25' },
+};
+
+export const BADGE_TYPES = {
+  SAVINGS_MASTER: { label: 'Savings Master', emoji: '\uD83C\uDFC6' },
+  BUDGET_NINJA: { label: 'Budget Ninja', emoji: '\uD83E\uDD77' },
+  STREAK_CHAMPION: { label: 'Streak Champion', emoji: '\u26A1' },
+  SPENDING_WARRIOR: { label: 'Spending Warrior', emoji: '\uD83D\uDEE1\uFE0F' },
+};
+
 export const CHECKLIST_ITEMS = {
   EMERGENCY_FUND: { label: 'Emergency Fund', emoji: '\uD83C\uDFE6', category: 'MUST HAVE' },
   HEALTH_INSURANCE: { label: 'Health Insurance', emoji: '\uD83C\uDFE5', category: 'MUST HAVE' },
