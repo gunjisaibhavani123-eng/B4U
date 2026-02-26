@@ -4,6 +4,8 @@ from app.models.expense import Expense
 from app.models.goal import Goal, GoalContribution
 from app.models.budget import Budget, BudgetCategory
 from app.models.checklist import UserChecklistItem
+from app.models.challenge import Challenge, UserChallenge, UserBadge
+from app.models.chat import ChatMessage
 
 __all__ = [
     "Base",
@@ -16,4 +18,8 @@ __all__ = [
     "Budget",
     "BudgetCategory",
     "UserChecklistItem",
+    "Challenge",
+    "UserChallenge",
+    "UserBadge",
+    "ChatMessage",
 ]

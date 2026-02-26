@@ -4,18 +4,23 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.database import engine
+from app.database import SessionLocal, engine
 from app.models.base import Base
 
 # Import all models so Base.metadata knows about them
-from app.models import budget, checklist, expense, goal, user  # noqa: F401
-
-from app.routers import auth, budgets, checklist as checklist_router, dashboard, expenses, goals, nudge, users
+from app.models import budget, challenge, chat, checklist, expense, goal, user  # noqa: F401
+from app.routers import auth, budgets, challenges, chat as chat_router, checklist as checklist_router, dashboard, expenses, goals, nudge, users
+from app.utils.seed_challenges import seed_challenges
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
+    db = SessionLocal()
+    try:
+        seed_challenges(db)
+    finally:
+        db.close()
     yield
 
 
@@ -43,6 +48,8 @@ app.include_router(goals.router, prefix="/api/v1")
 app.include_router(checklist_router.router, prefix="/api/v1")
 app.include_router(nudge.router, prefix="/api/v1")
 app.include_router(dashboard.router, prefix="/api/v1")
+app.include_router(challenges.router, prefix="/api/v1")
+app.include_router(chat_router.router, prefix="/api/v1")
 
 
 @app.get("/health")
