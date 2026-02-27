@@ -9,7 +9,17 @@
       "Bash(python -m uvicorn:*)",
       "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlNjFhNDRlNi03MGU0LTQ5NWYtYWU0Zi1mODY2Y2IyY2E1OWEiLCJleHAiOjE3NzEyMTk3NzAsInR5cGUiOiJhY2Nlc3MifQ.cfgo2PWIsxnS86m9sy2lHf3oJgo5X0jrK5gq-7KQPBY\")",
       "Bash(__NEW_LINE_b977dd1c2c73db3c__ echo \"=== CREATE GOAL ===\")",
-      "Bash(__NEW_LINE_b977dd1c2c73db3c__ echo -e \"\\\\n\\\\n=== GET GOALS ===\")"
+      "Bash(__NEW_LINE_b977dd1c2c73db3c__ echo -e \"\\\\n\\\\n=== GET GOALS ===\")",
+      "Bash(echo === My Challenges ===:*)",
+      "Bash(cd:*)",
+      "WebSearch",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(uvicorn main:app:*)",
+      "Bash(npm run:*)",
+      "Bash(git push:*)",
+      "Bash(git restore:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
