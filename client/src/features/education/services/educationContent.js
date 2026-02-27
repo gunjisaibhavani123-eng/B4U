@@ -21,6 +21,7 @@ export const TOPICS = [
         id: 'budget-2',
         title: 'The 50/30/20 Rule',
         duration: '4 min',
+        youtubeId: '5uaXq-xDp2g',
         description: 'A simple framework to divide your income into needs, wants, and savings.',
         takeaways: [
           '50% for needs (rent, food, bills)',
@@ -83,6 +84,7 @@ export const TOPICS = [
         id: 'debt-2',
         title: 'How to Get Out of Debt',
         duration: '6 min',
+        youtubeId: 'wnA9rCRALcw',
         description: 'Practical strategies to clear your dues.',
         takeaways: [
           'List all debts with interest rates',
@@ -123,6 +125,7 @@ export const TOPICS = [
         id: 'invest-1',
         title: 'Why Invest?',
         duration: '5 min',
+        youtubeId: 'cf3nDO1F6XU',
         description: 'Why keeping all money in savings account isn\'t enough.',
         takeaways: [
           'Inflation eats your savings',
