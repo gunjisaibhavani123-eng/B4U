@@ -13,6 +13,10 @@
       "destination": "/api/index"
     },
     {
+      "source": "/(docs|redoc|openapi.json)",
+      "destination": "/api/index"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
