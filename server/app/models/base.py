@@ -1,24 +1,25 @@
 import uuid
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, String, TypeDecorator, func
+from sqlalchemy import DateTime, TypeDecorator, func
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
 class GUID(TypeDecorator):
-    """Platform-independent UUID type. Uses String(36) for SQLite compatibility."""
+    """PostgreSQL-native UUID type."""
 
-    impl = String(36)
+    impl = UUID(as_uuid=True)
     cache_ok = True
 
     def process_bind_param(self, value, dialect):
         if value is not None:
-            return str(value)
+            if isinstance(value, str):
+                return uuid.UUID(value)
+            return value
         return value
 
     def process_result_value(self, value, dialect):
-        if value is not None:
-            return uuid.UUID(value)
         return value
 
 

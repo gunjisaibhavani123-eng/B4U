@@ -10,7 +10,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
-        value: sqlite:///./b4uspend.db
+        sync: false
       - key: CORS_ORIGINS
         sync: false
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
