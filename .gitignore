@@ -32,3 +32,5 @@ nul
 # Logs
 *.log
 npm-debug.log*
+
+.vercel
