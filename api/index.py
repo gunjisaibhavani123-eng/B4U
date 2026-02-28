@@ -4,8 +4,10 @@ import os
 # Add server directory to Python path so imports work
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'server'))
 
-# Vercel filesystem is read-only except /tmp — use /tmp for SQLite
-os.environ.setdefault('DATABASE_URL', 'sqlite:////tmp/b4uspend.db')
+# DATABASE_URL must be set as a Vercel environment variable (e.g. postgresql://...)
+# Fallback to ephemeral SQLite only for local testing without env var set
+if not os.environ.get('DATABASE_URL'):
+    raise RuntimeError("DATABASE_URL environment variable is not set. Set it in Vercel to a PostgreSQL connection string.")
 
 # Import the FastAPI app (this registers all models in Base.metadata)
 from main import app as _asgi_app  # noqa: F401

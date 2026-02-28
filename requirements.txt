@@ -9,3 +9,4 @@ pydantic-settings==2.7.1
 python-multipart==0.0.20
 python-dotenv==1.0.1
 a2wsgi
+psycopg2-binary==2.9.10
