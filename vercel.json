@@ -3,8 +3,7 @@
   "outputDirectory": "client/dist",
   "installCommand": "cd client && npm install",
   "functions": {
-    "api/index.py": {
-      "runtime": "python3.12",
+    "api/**/*.py": {
       "maxDuration": 30
     }
   },
